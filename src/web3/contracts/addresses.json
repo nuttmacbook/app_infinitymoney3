@@ -1,0 +1,10 @@
+{
+    "// how it works": "Deployed contract addresses per network, keyed by contract name. dev/chain/deploy-live.mjs fills this in; do not edit by hand. The app reads the network named by VITE_CHAIN (empty = bsc). The local test chain passes its own addresses while npm run dev runs.",
+    "bsc": {
+        "chainId": 56,
+        "contracts": {
+            "Spot3LogicImplementation": "0x62a013f5fe3E5eb9DdC2Ff571932e6367b5DA6f4",
+            "Spot3Logic": "0x6210F5278838bc6893d54C4259c5A1317F3Ad7cC"
+        }
+    }
+}

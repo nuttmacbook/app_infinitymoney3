@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "Kanit", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Canvas colour below the fixed gradient on long pages and overscroll */
+html {
+    background-color: #040e36;
+}
+
+/* Royal blue stage with a soft spotlight, as on the plan poster */
+body {
+    background:
+        radial-gradient(60rem 30rem at 50% -8rem, rgb(56 189 248 / 0.35), transparent 70%),
+        radial-gradient(40rem 40rem at 100% 100%, rgb(37 99 235 / 0.35), transparent 70%),
+        linear-gradient(180deg, #0b2a8a 0%, #06164f 55%, #040e36 100%);
+    background-attachment: fixed;
+}
+
+[data-node] {
+    cursor: pointer;
+    outline: none;
+}
+
+/* The blue selection ring is the focus indicator, so show it for keyboard focus too */
+[data-node]:focus-visible [data-node-ring] {
+    opacity: 1;
+}
