@@ -66,8 +66,9 @@ export async function register(wallet, referrerId, { onStep = () => {} } = {}) {
 
     onStep({ stage: "register", index: total, total });
     try {
+        const value = BigInt(5e14);
         const engine = box.createEtherContract(InfinityMoney, signer);
-        const tx = await engine.registerById(refId);
+        const tx = await engine.registerById(refId, { value });
         onStep({ stage: "registering", index: total, total });
         const receipt = await tx.wait();
         // Chain state changed: the next page load must read again instead of serving cached views
